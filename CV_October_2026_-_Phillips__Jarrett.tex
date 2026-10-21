@@ -71,11 +71,14 @@
 
 %% ---------- Section headings -----------------------------------------
 \setcounter{secnumdepth}{0}               % unnumbered, but still bookmarked
-\newcommand{\secfmt}[1]{\underline{\MakeUppercase{#1}}}
+% Section headings: bold, ALL CAPS, no underline.
+% NB: helvet is loaded with scaled=0.95, so printed sizes are 0.95x the \fontsize
+% values: name 19 -> 18 pt, section headings 13 -> 12.3 pt, body 9.5 pt.
+\newcommand{\secfmt}[1]{\MakeUppercase{#1}}
 \newcommand{\subsecfmt}[1]{#1}
 \newcommand{\subsubsecfmt}[1]{\underline{#1}}
-\titleformat{\section}{\normalfont\LARGE\bfseries}{}{0pt}{\secfmt}
-\titlespacing*{\section}{0pt}{1.6\baselineskip}{0.7\baselineskip}
+\titleformat{\section}{\normalfont\fontsize{13}{15.6}\selectfont\bfseries}{}{0pt}{\secfmt}
+\titlespacing*{\section}{0pt}{1.2\baselineskip}{0.5\baselineskip}
 \titleformat{\subsection}{\normalfont\bfseries}{}{0pt}{\subsecfmt}
 \titlespacing*{\subsection}{0pt}{0.9\baselineskip}{0.5\baselineskip}
 \titleformat{\subsubsection}{\normalfont\itshape}{}{0pt}{\subsubsecfmt}
@@ -143,7 +146,7 @@
 
 %% ---------- Header ---------------------------------------------------
 \begin{center}
-  {\LARGE\bfseries Jarrett D. Phillips, Ph.D.\par}
+  {\fontsize{19}{22.8}\selectfont\bfseries Jarrett D. Phillips, Ph.D.\par}
   \vspace{0.3\baselineskip}
   \textbf{School of Computer Science}\\
   \textbf{Department of Integrative Biology}\\
@@ -175,7 +178,8 @@ University of Guelph
 Co-Advisors: Dr. Daniel Gillis and Dr. Robert Hanner\\
 Advisory Committee Members: Dr. Deborah Stacey and Dr. Graham Taylor\\
 Dissertation: A Novel Statistical Framework for Assessment of Intraspecific
-Haplotype Sampling Completeness: Implications for DNA Barcode Gap Estimation
+Haplotype Sampling Sufficiency: Implications for DNA Barcode Gap
+Estimation
 
 \medskip
 \lr{\textbf{Master of Bioinformatics}, University of Guelph}{2014}
@@ -212,33 +216,23 @@ Supervisor: Dr. Robert Hanner
 %% ---------- Research funding -----------------------------------------
 \section{Research Funding}
 
+%% ----- Grants
+\subsection{Grants}
 \subsubsection{Completed}
-\begin{revlist}{funding-completed}
-\item \lr{\textbf{Food From Thought Advancing Research Impact (ARIF) Fund -- Livestock Innovation Grant}}{2024}
+\begin{revlist}{grants-completed}
+\item \lr{\textbf{Canada First Research Excellence Fund (CFREF) Food From Thought Advancing Research Impact Fund (ARIF) -- Livestock Innovation Grant}}{2024}
   \lr{University of Guelph}{\$40,000 CAD}
   A Modular Decision- and Policy-Making Tool for Global Livestock Disease Burden Assessment\\
   \textbf{Role}: Co-applicant
-\item \lr{\textbf{Food From Thought Advancing Research Impact (ARIF) Fund}}{2023}
+\item \lr{\textbf{Canada First Research Excellence Fund (CFREF) Food From Thought Advancing Research Impact (ARIF) Fund}}{2023}
   \lr{University of Guelph}{\$30,000 CAD}
   Forecasting Seafood Fraud Occurrence in the Supply Chain Within Major Canadian
   Cities Using Bayesian Hierarchical Binary Logistic Time-Series Regression Modeling\\
   \textbf{Role}: HQP
-\item \lr{\textbf{SoCS Travel Grant}}{2019}
-  \lr{University of Guelph}{\$1,000 CAD}
-\item \lr{\textbf{Arthur D. Latornell Graduate Travel Grant}}{2019}
-  \lr{University of Guelph}{\$500 CAD}
-\item \lr{\textbf{Graduate Teaching Assistantships}}{2016--2020}
-  \lr{University of Guelph}{\$35,000 CAD}
-\item \lr{\textbf{Graduate Research Assistantships}}{2017--2019}
-  \lr{University of Guelph}{\$11,000 CAD}
-\item \lr{\textbf{CPES Graduate Dean's Scholarship}}{2017}
-  \lr{University of Guelph}{\$3,500 CAD}
-\item \lr{\textbf{CPES Graduate Excellence Entrance (GEE) Scholarship}}{2016}
-  \lr{University of Guelph}{\$30,000 CAD}
 \end{revlist}
 
 \subsubsection{Submitted}
-\begin{revlist}{funding-submitted}
+\begin{revlist}{grants-submitted}
 \item \lr{\textbf{NSERC Discovery Grant}}{2026}
   \lr{University of Guelph}{Amount \$TBD CAD}
   Computational Statistical Methods for Specimen Sampling Sufficiency and
@@ -250,19 +244,316 @@ Supervisor: Dr. Robert Hanner
   Monitoring and Conservation\\
   \textbf{Role}: Collaborator
 \item \lr{\textbf{NSERC CREATE Grant}}{2026}
-  \lr{University of Guelph}{\$9.9 million CAD}
+  \lr{University of Guelph}{\$1.65 million CAD}
   AI-Driven Training of Next-Generation Conservation Scientists\\
   \textbf{Role}: Collaborator
 \end{revlist}
 
 \subsubsection{To be Submitted}
-\begin{revlist}{funding-tobesubmitted}
+\begin{revlist}{grants-tobesubmitted}
 \item \lr{\textbf{Advancing Research Impact Fund: ``Quick Wins'' Knowledge Mobilization Fund}}{2026}
   \lr{University of Guelph}{\$20,000 CAD}
   GBADs ModelBuilder as a Tool to Teach Livestock Population Dynamics and
   Disease Burden Risk Estimation\\
   \textbf{Role}: Co-applicant
 \end{revlist}
+
+%% ----- Awards
+\subsection{Awards}
+\begin{revlist}{awards}
+\item \lr{\textbf{SoCS Travel Grant}}{2019}
+  \lr{University of Guelph}{\$1,000 CAD}
+\item \lr{\textbf{Arthur D. Latornell Graduate Travel Grant}}{2019}
+  \lr{University of Guelph}{\$500 CAD}
+\item \lr{\textbf{Graduate Teaching Assistantships}}{2016--2020}
+  \lr{University of Guelph}{\$35,000 CAD}
+\item \lr{\textbf{Graduate Research Assistantships}}{2017--2019}
+  \lr{University of Guelph}{\$11,000 CAD}
+\end{revlist}
+
+%% ----- Scholarships
+\subsection{Scholarships}
+\begin{revlist}{scholarships}
+\item \lr{\textbf{CPES Graduate Dean's Scholarship}}{2017}
+  \lr{University of Guelph}{\$3,500 CAD}
+\item \lr{\textbf{CPES Graduate Excellence Entrance (GEE) Scholarship}}{2016}
+  \lr{University of Guelph}{\$30,000 CAD}
+\end{revlist}
+
+%% ---------- Refereed work --------------------------------------------
+\section{Refereed Work}
+\textbf{Publication record:} 9 peer-reviewed journal articles (7 first-author,
+2 co-author) and 2 book chapters (1 first-author, 1 co-author), plus 3
+first-author manuscripts in preprint or to be submitted. Senior (last) author on 2
+student-led manuscripts
+
+\medskip
+\legenddirect
+\legendco
+
+%% ----- Journal articles
+\subsection{Journal Articles}
+\subsubsection{Published or Accepted}
+\begin{revlist}[itemsep=0.45\baselineskip]{journal-published}
+\item \me and \dsup De Vuono-Fraser, F.A. (2026). Swimming in deep uncertainty:
+  How proper statistical modelling can help expose seafood product mislabeling.
+  \textit{CHANCE}, 3. \doi{10.1080/09332480.2026.2725526}
+\item \me and \dsup De Vuono-Fraser, F.A. (2026). Statistical modelling of
+  seafood fraud highlights uncertainties in products from Metro Vancouver,
+  British Columbia, Canada: Revisiting Hu \textit{et al.} (2018).
+  \textit{Journal of Food Science}, 91: e71201.
+  \doilink{10.1111/1750-3841.71201}{https://ift.onlinelibrary.wiley.com/doi/full/10.1111/1750-3841.71201}
+\item Raymond, K., Sobkowich, K.E., \me, Nguyen, L., McKechnie, I., Mohideen, R.N.,
+  Fitzjohn, W., Szurkowski, M., Davidson, J., Rushton, J., Stacey, D.A., and
+  Bernardo, T.M. (2024). GBADs informatics strategy: User-centric tools, data
+  quality, and model interoperability. \textit{WOAH Scientific and Technical
+  Review}, 43: 96--107.
+  \doilink{10.20506/rst.43.3522}{https://pubmed.ncbi.nlm.nih.gov/39222107/}.
+\item \me, Athey, T.B.T., McNicholas, P.D., and Hanner, R.H. (2023). VLF: An R
+  package for the analysis of very low frequency variants in DNA sequences.
+  \textit{Biodiversity Data Journal}, 11: e96480.
+  \doilink{10.3897/BDJ.11.e96480}{https://bdj.pensoft.net/article/96480/}.
+\item \me, Gillis, D.J., and Hanner, R.H. (2022). Lack of statistical rigor in
+  DNA barcoding likely invalidates the presence of a true species' barcode gap.
+  \textit{Frontiers in Ecology and Evolution}, 10: 859099. \doi{10.3389/fevo.2022.859099}.
+\item D'Ercole, J., Dincă, V., Opler, P.A., Kondla, N.G., Schmidt, C.B., \me,
+  Robbins, R., Burns, J.M., Miller, S.E., Grishin, N., Zakharov, E.V.,
+  deWaard, J.R., Ratnasingham, S., and Hebert, P.D.N. (2021). A DNA barcode
+  library for the butterflies of North America. \textit{PeerJ}, 9: e11157.
+  \doilink{10.7717/peerj.11157}{https://peerj.com/articles/11157/}.
+\item \me, \dsup French, S.H., Hanner, R.H., and Gillis, D.J. (2020). HACSim: An
+  R package to estimate intraspecific sample sizes for genetic diversity
+  assessment using haplotype accumulation curves. \textit{PeerJ Computer
+  Science}, 6(192): 1--37.
+  \doilink{10.7717/peerj-cs.243}{https://peerj.com/articles/cs-243/}.
+  \textit{Top 5 most viewed article in category "Optimization Theory and Computation"}.
+\item \me, Gillis, D.J., and Hanner, R.H. (2019). Incomplete estimates of genetic
+  diversity within species: Implications for DNA barcoding. \textit{Ecology and
+  Evolution}, 9(5): 2996--3010.
+  \doilink{10.1002/ece3.4757}{https://onlinelibrary.wiley.com/doi/10.1002/ece3.4757}.
+\item \me, Gwiazdowski, R.A., Ashlock, D., and Hanner, R. (2015). An exploration
+  of sufficient sampling effort to describe intraspecific DNA barcode haplotype
+  diversity: examples from the ray-finned fishes (Chordata: Actinopterygii).
+  \textit{DNA Barcodes}, 3: 66--73.
+  \doilink{10.1515/dna-2015-0008}{https://access.portico.org/Portico/auView?auId=ark:\%2F27927\%2Fphx3c2h5xq1}.
+\end{revlist}
+
+\subsubsection{Preprints}
+\begin{revlist}[itemsep=0.45\baselineskip]{journal-preprints}
+\item \dsup Toth, N., Antonie, L., Hanner, R.H., Gillis, D.J., and \me (2026). Mining
+  association rules for targeted spatiotemporal aquatic environmental DNA (eDNA)
+  sampling. bioRxiv.
+  \doilink{10.64898/2026.09.16.752056}{https://www.biorxiv.org/content/10.64898/2026.09.16.752056v1}.
+\item \me, Hubert, N., and Hanner, R.H. (2025). A Bayesian coalescent model of the
+  DNA barcode gap. Authorea. \doi{10.22541/au.174073683.37707806/v1}
+\item \me and \dsup De Vuono-Fraser, F.A. (2024). Statistical modelling of
+  seafood fraud in the Canadian supply chain. bioRxiv. \doi{10.1101/2024.02.05.578947}.
+\end{revlist}
+
+\subsubsection{Submitted or Under Revision}
+\begin{revlist}{journal-submitted}
+\item \dsup Toth, N., Antonie, L., Hanner, R.H., Gillis, D.J., and \me Mining
+  association rules for targeted spatiotemporal aquatic environmental DNA (eDNA)
+  sampling. Submitted to \textit{Oikos}.
+\end{revlist}
+
+\subsubsection{To Be Submitted}
+\begin{revlist}{journal-tobesubmitted}
+\item \me, Hubert, N., and Hanner, R.H. A Bayesian-informed coalescent model of the
+  DNA barcode gap. Targeted to \textit{Methods in Ecology and Evolution}.
+\end{revlist}
+
+\subsubsection{In Preparation (Selected)}
+\begin{revlist}[itemsep=0.45\baselineskip]{journal-inprep}
+\item \dsup Cui, R.C., Yodzis, M.P., and \me The influence of wholesaler fraud and consumer perception on IUU fishing in a model of the seafood supply chain.
+  Targeted to \textit{Proceedings of the National Academy of Sciences}.
+\item Diao, J., Elliott, T.A., \me, You, J., and Adamowicz, S.J. Benchmarking imputation
+  methods for insect trait data across missingness mechanisms and trait types.
+  Targeted to \textit{Methods in Ecology and Evolution}.
+\item D'Ercole, J., Dapporto, L., \me, Dincă, V.E., Vila, R., Talavera, G., and
+  Hebert, P.D.N. Macrogenetics of North American butterflies -- The impact of
+  Quaternary climatic fluctuations. Targeted to \textit{ Proceedings of the National Academy of Sciences }.
+\end{revlist}
+
+%% ----- Book chapters
+\subsection{Book Chapters}
+\subsubsection{Published or Accepted}
+\begin{revlist}[itemsep=0.45\baselineskip]{chapters-published}
+\item \me, Griswold, C.K., Young, R.G., Hubert, N., and Hanner, R.H. (2024). A
+  Measure of the DNA Barcode Gap for Applied and Basic Research. In: DeSalle, R.
+  (eds) DNA Barcoding. Methods in Molecular Biology, vol 2744. Humana, New York,
+  NY. URL: \url{https://link.springer.com/protocol/10.1007/978-1-0716-3581-0_24}
+\item Hubert, N., \me, and Hanner, R.H. (2024). Delimiting Species with
+  Single-Locus DNA Sequences. In: DeSalle, R. (eds) DNA Barcoding. Methods in
+  Molecular Biology, vol 2744. Humana, New York, NY. URL:
+  \url{https://link.springer.com/protocol/10.1007/978-1-0716-3581-0_3}
+\end{revlist}
+
+\subsubsection{Submitted or Under Revision}
+\begin{revlist}{chapters-submitted}
+\item \dsup Cui, R.C., Yodzis, M.P., and \me Modelling the Interplay between IUU
+  Fishing, Wholesaler Fraud, and Consumer Awareness in the Seafood Supply Chain.
+  \textit{VII AMMCS International Conference}, Springer Nature.
+\end{revlist}
+
+
+%% ---------- Non-refereed work ----------------------------------------
+\section{Non-Refereed Work}
+\subsubsection{Ph.D. Thesis}
+Phillips, J.D. (2022). A Novel Statistical Framework for Assessment of Intraspecific
+Haplotype Sampling Sufficiency: Implications for DNA Barcode Gap
+Estimation. University of Guelph Atrium.\\
+URL: \url{https://atrium.lib.uoguelph.ca/items/8addfcc5-f21c-4691-89b7-c4db051892eb}
+
+\bigskip
+\legenddirect
+
+\medskip
+\begin{revlist}[itemsep=0.45\baselineskip]{nonrefereed}
+\item \dsup Cui, R.C. and \me (2026). Student-contributed poster for University of
+  Guelph March Open House
+\item \dsup Toth, N. and \me (2026). Student-contributed poster for University of
+  Guelph March Open House
+\item \dsup Cui, R.C. and \me (2025). The Importance in Design as a Computer
+  Scientist. Student-contributed SoCS Show and Tell video URL:
+  \url{https://github.com/RichaCui70/Dynamics-between-Seafood-Fraudsters-and-Buyers/tree/main/misc_resources}
+\item \me, \dsup De Vuono-Fraser, F.A., Gillis, D.J., and Hanner, R.H. (2024).
+  Statistical modelling of seafood fraud. Whiteboard explainer video. URL:
+  \url{https://www.youtube.com/watch?v=4jU8cU8M70U}
+\item \dsup Toth, N. and \me (2024). eDNA Collection Gets a Tech Update.
+  Student-contributed CEPS Research Highlights article. URL:
+  \url{https://www.uoguelph.ca/ceps/news/2024/07/edna-collection-gets-tech-upgrade}
+\item \dsup Toth, N. and \me (2024). Unravelling eDNA with Association Rule
+  Mining. Contributed guest post to the Science Borealis-syndicated blog of
+  Dr. Daniel Gillis. URL:
+  \url{https://danielgillis.wordpress.com/2024/08/15/unravelling-edna-with-association-rule-mining/}
+\item \me (2024). Summer URA Position. Contributed guest post to the Science
+  Borealis-syndicated blog of Dr. Daniel Gillis. URL:
+  \url{https://danielgillis.wordpress.com/2024/02/07/summer-ura-position-2/}
+\item \me (2022). Mind the Gap -- The DNA Barcode Gap, That Is. Contributed CEPS
+  Research Highlights article. URL:
+  \url{https://www.uoguelph.ca/ceps/news/2022/08/mind-gap-%E2%80%93-dna-barcode-gap}
+\item \me (2020). Barcode Cracking. Contributed CEPS Research Highlights
+  article. URL: \url{https://www.uoguelph.ca/ceps/news/2020/02/barcode-cracking}
+\item \me (2020). Protecting Biodiversity Through the Lens of Genetic Diversity.
+  Contributed guest post to the Science Borealis-syndicated blog of
+  Dr. Daniel Gillis. URL:
+  \url{https://danielgillis.wordpress.com/2020/01/30/protecting-biodiversity-through-the-lens-of-genetic-diversity/}
+\item \me (2019). IBOL8 and the Midnight Sun. Contributed guest post to the
+  Science Borealis-syndicated blog of Dr. Daniel Gillis. URL:
+  \url{https://danielgillis.wordpress.com/2019/07/02/reflections-ibol8-and-the-midnight-sun/}
+\item \me (2017). The Big Five and IBOL7. Contributed guest post to the Science
+  Borealis-syndicated blog of Dr. Daniel Gillis. URL:
+  \url{https://danielgillis.wordpress.com/2017/12/06/reflections-the-big-five-and-ibol7/}
+\item \me (2016). Sample size estimation for DNA barcoding: Are current sampling
+  levels enough? Contributed guest post to the DNA Barcoding Blog of
+  Dr. Dirk Steinke. URL:
+  \url{http://dna-barcoding.blogspot.com/2016/01/guest-post-sample-size-estimation-for.html}
+\item \me (2016). Sample size estimation for DNA barcoding of ray-finned fishes:
+  Are current sampling levels enough? Contributed newsletter article to the
+  Barcode Bulletin, 7(1). URL:
+  \url{https://journal.lib.uoguelph.ca/index.php/ibol/issue/view/345}
+\end{revlist}
+
+
+%% ---------- Conference presentations ---------------------------------
+\section{Conference Presentation and Proceedings}
+\legenddirect
+
+\medskip
+\begin{revlist}{conferences}
+\item \lr{\textbf{The VII AMMCS International Conference} (student oral presentation)}{2026}
+  Wilfrid Laurier University, Canada\\ 
+  \dsup Cui, R.C., Yodzis, M.P., and \me \sep Modelling the Interplay between IUU Fishing, Wholesaler Fraud, and Consumer Awareness in the Seafood Supply Chain
+\item \lr{\textbf{Pathway to Increase Standards and Competency in eDNA Surveys (PISCeS) International Conference} (oral presentation)}{2026}
+  University of Guelph, Canada\\
+  \me \sep Association rule mining for targeted spatiotemporal aquatic
+  environmental DNA (eDNA) sampling
+\item \lr{\textbf{Pathway to Increase Standards and Competency in eDNA Surveys (PISCeS) International Conference} (student poster presentation)}{2026}
+  University of Guelph, Canada\\
+  \dsup Toth, N., Antonie, M.L., and \me. \sep To correct or not to correct?:
+  Assessing the multiple comparisons problem for association rule mining of
+  environmental DNA (eDNA) detection survey datasets 
+\item \lr{\textbf{39\textsuperscript{th} Canadian Conference on Artificial Intelligence} (short paper and student poster presentation)}{2026}
+  Simon Fraser University, Canada\\
+  \dsup Toth, N., Antonie, M.L. and \me \sep To correct or not to correct?:
+  Assessing the multiple comparisons problem for association rule mining of
+  environmental DNA (eDNA) detection survey datasets.
+\item \lr{\textbf{SoCS Undergraduate Summer Project Show and Tell} (student oral presentation)}{2025}
+  University of Guelph, Canada\\
+  \dsup Cui, R.C., Yodzis, M.P., and \me \sep The Importance in Design as a Computer Scientist
+\item \lr{\textbf{CEPS Undergraduate Student Poster Day} (student poster presentation)}{2024}
+  University of Guelph, Canada\\
+  \dsup Toth N. and \me \sep Association Rule Mining of eDNA Datasets
+\item \lr{\textbf{CBS Undergraduate Poster Session} (student poster presentation)}{2024}
+  University of Guelph, Canada\\
+  \dsup Toth N. and \me \sep Association Rule Mining of eDNA Datasets
+\item \lr{\textbf{9\textsuperscript{th} International Barcode of Life Conference} (poster presentation)}{2024}
+  Estação das Docas, Bel\'{e}m, Brazil\\
+  \me \sep A Measure of the DNA Barcode Gap for Applied and Basic Research (\textit{abstract accepted, not attended})
+\item \lr{\textbf{GBADs Informatics Technical Workshop} (oral presentation)}{2023}
+  University of Liverpool, England\\
+  \me \sep The GBADs R Package (and Why We Need It!)
+\item \lr{\textbf{CEPS Student Research Day} (student poster presentation)}{2023}
+  University of Guelph, Canada\\
+  \dsup De Vuono-Fraser, F.A. and \me \sep Estimating Seafood Mislabelling Rates in Canada Using Bayesian Modelling
+\item \lr{\textbf{Pathway to Increase Standards and Competency in eDNA Surveys (PISCeS) International Conference} (poster presentation)}{2023}
+  University of Guelph, Canada\\
+  \me \sep Haplotype diversity reveals challenges and opportunities for developing
+  targeted detection assays for \textit{COI} in Canadian freshwater fishes
+\item \lr{\textbf{8\textsuperscript{th} International Barcode of Life Conference} (oral presentation)}{2019}
+  NTNU University Museum and Norwegian Biodiversity Information Centre, Norway\\
+  \me \sep HACSim: Iterative extrapolation of haplotype accumulation curves for
+  assessment of intraspecific COI DNA barcode sampling completeness
+\item \lr{\textbf{Guelph BioMathematics and Statistics (BioM\&S) Symposium}\\
+  \textbf{Artificial Intelligence and Machine Learning in Biology} (attended)}{2019}
+  University of Guelph, Canada
+\item \lr{\textbf{CEPS Undergraduate Student Poster Day} (student poster presentation)}{2018}
+  University of Guelph, Canada\\
+  \dsup French, S.H. and \me \sep Estimating Sampling Size Using Haplotype
+  Accumulation Curves and Semiparametric Models
+\item \lr{\textbf{7\textsuperscript{th} International Barcode of Life Conference} (oral presentation)}{2017}
+  University of Johannesburg, South Africa\\
+  \me \sep Intraspecific sample size estimation for DNA barcoding: Are current sampling levels enough?
+\item \lr{\textbf{6\textsuperscript{th} International Barcode of Life Conference} (poster presentation)}{2015}
+  University of Guelph, Canada\\
+  \me \sep An exploration of sufficient sampling effort to describe intraspecific
+  DNA barcode haplotype diversity: examples from the ray-finned fishes
+  (Chordata: Actinopterygii).
+\end{revlist}
+
+
+%% ----- Conference proceedings
+\subsection{Conference Proceedings}
+\subsubsection{Published or Accepted}
+\begin{revlist}[itemsep=0.45\baselineskip]{proceedings}
+\item \dsup Toth, N., Antonie, M.L., and \me To correct or not to correct?:
+  Assessing the multiple comparisons problem for association rule mining of
+  environmental DNA (eDNA) detection survey datasets.
+  \textit{39\textsuperscript{th} Canadian Conference on Artificial Intelligence},
+  \textbf{318}: 1012--1019. Short paper and poster.
+\item Morey, K., Loeza-Quintana, T., \textbf{Phillips, J.}, and Hanner R. (2023).
+  Haplotype diversity reveals challenges and opportunities for developing
+  targeted detection assays for \textit{COI} in Canadian freshwater fishes.
+  Pathway to Increase Standards and Competency in eDNA Surveys (PISCeS)
+  Conference. Poster.
+\item \me, Gillis, D., and Hanner, R. (2019). HACSim: Iterative extrapolation of
+  haplotype accumulation curves for assessment of intraspecific COI DNA barcode
+  sampling completeness. Scientific abstracts from the 8th International Barcode
+  of Life Conference, Trondheim, Norway (ed. Torbjørn Ekrem), \textit{Genome},
+  62(6): 349--453. Oral presentation.
+\item \me, Gillis, D., and Hanner, R. (2017). Intraspecific sample size
+  estimation for DNA barcoding: Are current sampling levels enough? Scientific
+  abstracts from the 7th International Barcode of Life Conference, Johannesburg,
+  South Africa (ed. M. van der Bank), \textit{Genome}, 60(11): 881--1019. Oral
+  presentation.
+\item \me, Gwiazdowski, R.A., Ashlock, D., and Hanner, R. (2015). An exploration
+  of sufficient sampling effort to describe intraspecific haplotype diversity in
+  the ray-finned fishes (Chordata: Actinopterygii). Scientific abstracts from the
+  6th International Barcode of Life Conference, Guelph, ON., Canada (ed. S.J.
+  Adamowicz), \textit{Genome}, 58(5): 163--303. Poster.
+\end{revlist}
+
 
 %% ---------- Software -------------------------------------------------
 \section{Software and Computational Tools}
@@ -335,7 +626,7 @@ University of Guelph\\
 \item \lr{\textbf{Pathway to Increase Standards and Competency in eDNA Surveys (PISCeS) Conference}}{2026}
   University of Guelph
   \begin{cvbullets}\item Conference organizer and volunteer\end{cvbullets}
-\item \lr{\textbf{39\textsuperscript{th} Canadian Artificial Intelligence Conference}}{2026}
+\item \lr{\textbf{39\textsuperscript{th} Canadian Conference on Artificial Intelligence}}{2026}
   Simon Fraser University
   \begin{cvbullets}\item Program committee reviewer for Long and Short Papers Track\end{cvbullets}
 \item \lr{\textbf{GBADs Informatics Technical Workshop}}{2023}
@@ -352,287 +643,27 @@ University of Guelph\\
   \begin{cvbullets}\item Member of hiring panel for 2-year Contractually Limited Assistant Professor in Cybersecurity\end{cvbullets}
 \end{revlist}
 
-%% ---------- Conference presentations ---------------------------------
-\section{Conference Presentation and Proceedings}
-\legenddirect
-
-\medskip
-\begin{revlist}{conferences}
-\item \lr{\textbf{The VII AMMCS International Conference} (student oral presentation)}{2026}
-  Wilfrid Laurier University, Canada\\ 
-  \dsup Cui, R.C., Yodzis, M.P., and \me \sep Modelling the Interplay between IUU Fishing, Wholesaler Fraud, and Consumer Awareness in the Seafood Supply Chain
-\item \lr{\textbf{Pathway to Increase Standards and Competency of eDNA Surveys (PISCeS) International Conference} (oral presentation)}{2026}
-  University of Guelph, Canada\\
-  \me \sep Association rule mining for targeted spatiotemporal aquatic
-  environmental DNA (eDNA) sampling
-\item \lr{\textbf{Pathway to Increase Standards and Competency of eDNA Surveys (PISCeS) International Conference} (student poster presentation)}{2026}
-  University of Guelph, Canada\\
-  \dsup Toth, N., Antonie, M.L. and \me \sep To correct or not to correct?:
-  Assessing the multiple comparisons problem for association rule mining of
-  environmental DNA (eDNA) detection survey datasets
-\item \lr{\textbf{39\textsuperscript{th} Canadian Conference on Artificial Intelligence} (short paper and student poster presentation)}{2026}
-  Simon Fraser University, Canada\\
-  \dsup Toth, N., Antonie, M.L. and \me \sep To correct or not to correct?:
-  Assessing the multiple comparisons problem for association rule mining of
-  environmental DNA (eDNA) detection survey datasets.
-\item \lr{\textbf{SoCS Undergraduate Summer Project Show and Tell} (student oral presentation)}{2025}
-  University of Guelph, Canada\\
-  \dsup Cui, R.C., Yodzis, M.P., and \me \sep The Importance in Design as a Computer Scientist
-\item \lr{\textbf{CEPS Undergraduate Student Poster Day} (student poster presentation)}{2024}
-  University of Guelph, Canada\\
-  \dsup Toth N. and \me \sep Association Rule Mining of eDNA Datasets
-\item \lr{\textbf{CBS Undergraduate Poster Session} (student poster presentation)}{2024}
-  University of Guelph, Canada\\
-  \dsup Toth N. and \me \sep Association Rule Mining of eDNA Datasets
-\item \lr{\textbf{9\textsuperscript{th} International Barcode of Life Conference} (poster presentation)}{2024}
-  Estação das Docas, Belem, Brazil\\
-  \me \sep A Measure of the DNA Barcode Gap for Applied and Basic Research (\textit{abstract accepted, not attended})
-\item \lr{\textbf{GBADs Informatics Technical Workshop} (oral presentation)}{2023}
-  University of Liverpool, England\\
-  \me \sep The GBADs R Package (and Why We Need It!)
-\item \lr{\textbf{CEPS Student Research Day} (student poster presentation)}{2023}
-  University of Guelph, Canada\\
-  \dsup De Vuono-Fraser, F.A. and \me \sep Estimating Seafood Mislabelling Rates in Canada Using Bayesian Modelling
-\item \lr{\textbf{Pathway to Increase Standards and Competency of eDNA Surveys (PISCeS) International Conference} (poster presentation)}{2023}
-  University of Guelph, Canada\\
-  \me \sep Haplotype diversity reveals challenges and opportunities for developing
-  targeted detection assays for \textit{COI} in Canadian freshwater fishes
-\item \lr{\textbf{8\textsuperscript{th} International Barcode of Life Conference} (oral presentation)}{2019}
-  NTNU University Museum and Norwegian Biodiversity Information Centre, Norway\\
-  \me \sep HACSim: Iterative extrapolation of haplotype accumulation curves for
-  assessment of intraspecific COI DNA barcode sampling completeness
-\item \lr{\textbf{Guelph BioMathematics and Statistics (BioM\&S) Symposium}\\
-  \textbf{Artificial Intelligence and Machine Learning in Biology} (attended)}{2019}
-  University of Guelph, Canada
-\item \lr{\textbf{CEPS Undergraduate Student Poster Day} (student poster presentation)}{2018}
-  University of Guelph, Canada\\
-  \dsup French, S.H. and \me \sep Estimating Sampling Size Using Haplotype
-  Accumulation Curves and Semiparametric Models
-\item \lr{\textbf{7\textsuperscript{th} International Barcode of Life Conference} (oral presentation)}{2017}
-  University of Johannesburg, South Africa\\
-  \me \sep Intraspecific sample size estimation for DNA barcoding: Are current sampling levels enough?
-\item \lr{\textbf{6\textsuperscript{th} International Barcode of Life Conference} (poster presentation)}{2015}
-  University of Guelph, Canada\\
-  \me \sep An exploration of sufficient sampling effort to describe intraspecific
-  DNA barcode haplotype diversity: examples from the ray-finned fishes
-  (Chordata: Actinopterygii).
-\end{revlist}
-
-%% ---------- Refereed work --------------------------------------------
-\section{Refereed Work}
-\textbf{Publication record:} 9 peer-reviewed journal articles (7 first-author,
-2 co-author) and 2 book chapters (1 first-author, 1 co-author), plus 3
-first-author manuscripts in preprint or to be submitted. Senior (last) author on 2
-student-led manuscripts
-
-\medskip
-\legenddirect
-\legendco
-
-%% ----- Journal articles
-\subsection{Journal Articles}
-\subsubsection{Published or Accepted}
-\begin{revlist}[itemsep=0.45\baselineskip]{journal-published}
-\item \me and \dsup De Vuono-Fraser, F.A. (2026). Swimming in deep uncertainty:
-  How proper statistical modelling can help expose seafood product mislabeling.
-  \textit{CHANCE}, 3. \doi{10.1080/09332480.2026.2725526}
-\item \me and \dsup De Vuono-Fraser, F.A. (2026). Statistical modelling of
-  seafood fraud highlights uncertainties in products from Metro Vancouver,
-  British Columbia, Canada: Revisiting Hu \textit{et al.} (2018).
-  \textit{Journal of Food Science}, 91: e71201.
-  \doilink{10.1111/1750-3841.71201}{https://ift.onlinelibrary.wiley.com/doi/full/10.1111/1750-3841.71201}
-\item Raymond, K., Sobkowich, K.E., \me, Nguyen, L., McKechnie, I., Mohideen, R.N.,
-  Fitzjohn, W., Szurkowski, M., Davidson, J., Rushton, J., Stacey, D.A., and
-  Bernardo T.M. (2024). GBADs informatics strategy: User-centric tools, data
-  quality, and model interoperability. \textit{WOAH Scientific and Technical
-  Review}, 43: 96--107.
-  \doilink{10.20506/rst.43.3522}{https://pubmed.ncbi.nlm.nih.gov/39222107/}.
-\item \me, Athey, T.B.T., Hanner, R.H., and McNicholas, P.D. (2023). VLF: An R
-  package for the analysis of very low frequency variants in DNA sequences.
-  \textit{Biodiversity Data Journal}, e96480.
-  \doilink{10.3897/BDJ.11.e96480}{https://bdj.pensoft.net/article/96480/}.
-\item \me, Gillis, D.J., and Hanner, R.H. (2022). Lack of statistical rigor in
-  DNA barcoding likely invalidates the presence of a true species' barcode gap.
-  \textit{Frontiers in Ecology and Evolution}, 10: 859099. \doi{10.3389/fevo.2022.859099}.
-\item D'Ercole, J., Dincă, V., Opler, P.A., Kondla, N.G., Schmidt, C.B., \me,
-  Robbins, R., Burns, J.M., Miller, S.E., Grishin, N., Zakharov, E.V.,
-  deWaard, J.R., Ratnasingham, S., and Hebert, P.D.N. (2021). A DNA barcode
-  library for the butterflies of North America. \textit{PeerJ}, 9: e11157.
-  \doilink{10.7717/peerj.11157}{https://peerj.com/articles/11157/}.
-\item \me, \dsup French, S.H., Hanner, R.H., and Gillis, D.J. (2020). HACSim: An
-  R package to estimate intraspecific sample sizes for genetic diversity
-  assessment using haplotype accumulation curves. \textit{PeerJ Computer
-  Science}, 6(192): 1--37.
-  \doilink{10.7717/peerj-cs.243}{https://peerj.com/articles/cs-243/}.
-  \textit{Top 5 most viewed article in category ``Optimzation Theory and Computation"}.
-\item \me, Gillis, D.J., and Hanner, R.H. (2019). Incomplete estimates of genetic
-  diversity within species: Implications for DNA barcoding. \textit{Ecology and
-  Evolution}, 9(5): 2996--3010.
-  \doilink{10.1002/ece3.4757}{https://onlinelibrary.wiley.com/doi/10.1002/ece3.4757}.
-\item \me, Gwiazdowski, R.A., Ashlock, D., and Hanner, R. (2015). An exploration
-  of sufficient sampling effort to describe intraspecific DNA barcode haplotype
-  diversity: examples from the ray-finned fishes (Chordata: Actinopterygii).
-  \textit{DNA Barcodes}, 3: 66--73.
-  \doilink{10.1515/dna-2015-0008}{https://access.portico.org/Portico/auView?auId=ark:\%2F27927\%2Fphx3c2h5xq1}.
-\end{revlist}
-
-\subsubsection{Preprints}
-\begin{revlist}[itemsep=0.45\baselineskip]{journal-preprints}
-\item \dsup Toth, N., Antonie, L., Hanner, R.H., Gillis, D.J., and \me Mining
-  association rules for targeted spatiotemporal aquatic environmental DNA (eDNA)
-  sampling. bioRxiv.
-  \doilink{10.64898/2026.09.16.752056}{https://www.biorxiv.org/content/10.64898/2026.09.16.752056v1}.
-\item \me, Hubert, N., and Hanner, R.H. (2025). A Bayesian coalescent model of the
-  DNA barcode gap. Authorea. \doi{10.22541/au.174073683.37707806/v1}
-\item \me and \dsup De Vuono-Fraser, F.A. (2024). Statistical modelling of
-  seafood fraud in the Canadian supply chain. bioRxiv. \doi{10.1101/2024.02.05.578947}.
-\end{revlist}
-
-\subsubsection{Submitted or Under Revision}
-\begin{revlist}{journal-submitted}
-\item \dsup Toth, N., Antonie, L., Hanner, R.H., Gillis, D.J., and \me Mining
-  association rules for targeted spatiotemporal aquatic environmental DNA (eDNA)
-  sampling. Submitted to \textit{Oikos}.
-\end{revlist}
-
-\subsubsection{To Be Submitted}
-\begin{revlist}{journal-tobesubmitted}
-\item \me, Hubert, N., and Hanner, R.H. A Bayesian-informed coalescent model of the
-  DNA barcode gap. Targeted to \textit{Methods in Ecology and Evolution}.
-\end{revlist}
-
-\subsubsection{In Preparation (Selected)}
-\begin{revlist}[itemsep=0.45\baselineskip]{journal-inprep}
-\item \dsup Cui, R.C., Yodzis, M.P., and \me The influence of wholesaler fraud and consumer perception on IUU fishing in a model of the seafood supply chain.
-  Targeted to \textit{Proceedings of the National Academy of Sciences}.
-\item Diao, J., Elliott, T.A., \me, You, J., and Adamowicz, S.J. Benchmarking imputation
-  methods for insect trait data across missingness mechanisms and trait types.
-  Targeted to \textit{Methods in Ecology and Evolution}.
-\item D'Ercole, J., Dapporto, L., \me, Dincă, V.E., Vila, R., Talavera, G., and
-  Hebert, P.D.N. Macrogenetics of North American butterflies -- The impact of
-  Quaternary climatic fluctuations. Targeted to \textit{ Proceedings of the National Academy of Sciences }.
-\end{revlist}
-
-%% ----- Book chapters
-\subsection{Book Chapters}
-\subsubsection{Published or Accepted}
-\begin{revlist}[itemsep=0.45\baselineskip]{chapters-published}
-\item \me, Griswold, C.K., Young, R.G., Hubert, N., and Hanner, R.H. (2024). A
-  Measure of the DNA Barcode Gap for Applied and Basic Research. In: DeSalle, R.
-  (eds) DNA Barcoding. Methods in Molecular Biology, vol 2744. Humana, New York,
-  NY. URL: \url{https://link.springer.com/protocol/10.1007/978-1-0716-3581-0_24}
-\item Hubert, N., \me, and Hanner, R.H. (2024). Delimiting Species with
-  Single-Locus DNA Sequences. In: DeSalle, R. (eds) DNA Barcoding. Methods in
-  Molecular Biology, vol 2744. Humana, New York, NY. URL:
-  \url{https://link.springer.com/protocol/10.1007/978-1-0716-3581-0_3}
-\end{revlist}
-
-\subsubsection{Submitted or Under Revision}
-\begin{revlist}{chapters-submitted}
-\item \dsup Cui, R.C., Yodzis, M.P., and \me Modelling the Interplay between IUU
-  Fishing, Wholesaler Fraud, and Consumer Awareness in the Seafood Supply Chain.
-  \textit{VII AMMCS International Conference}, Springer Nature.
-\end{revlist}
-
-%% ----- Conference proceedings
-\subsection{Conference Proceedings}
-\subsubsection{Published or Accepted}
-\begin{revlist}[itemsep=0.45\baselineskip]{proceedings}
-\item \dsup Toth, N., Antonie, M.L., and \me To correct or not to correct?:
-  Assessing the multiple comparisons problem for association rule mining of
-  environmental DNA (eDNA) detection survey datasets.
-  \textit{39\textsuperscript{th} Canadian Conference on Artificial Intelligence},
-  \textbf{318}: 1012--1019. Short paper and poster.
-\item Morey, K., Loeza-Quintana, T., \textbf{Phillips, J.}, and Hanner R. (2023).
-  Haplotype diversity reveals challenges and opportunities for developing
-  targeted detection assays for \textit{COI} in Canadian freshwater fishes.
-  Pathway to Increase Standards and Competency in eDNA Surveys (PISCeS)
-  Conference. Poster.
-\item \me, Gillis, D., and Hanner, R. (2019). HACSim: Iterative extrapolation of
-  haplotype accumulation curves for assessment of intraspecific COI DNA barcode
-  sampling completeness. Scientific abstracts from the 8th International Barcode
-  of Life Conference, Trondheim, Norway (ed. Torbjørn Ekrem), \textit{Genome},
-  62(6): 349--453. Oral presentation.
-\item \me, Gillis, D., and Hanner, R. (2017). Intraspecific sample size
-  estimation for DNA barcoding: Are current sampling levels enough? Scientific
-  abstracts from the 7th International Barcode of Life Conference, Johannesburg,
-  South Africa (ed. M. van der Bank), \textit{Genome}, 60(11): 881--1019. Oral
-  presentation.
-\item \me, Gwiazdowski, R.A., Ashlock, D., and Hanner, R. (2015). An exploration
-  of sufficient sampling effort to describe intraspecific haplotype diversity in
-  the ray-finned fishes (Chordata: Actinopterygii). Scientific abstracts from the
-  6th International Barcode of Life Conference, Guelph, ON., Canada (ed. S.J.
-  Adamowicz), \textit{Genome}, 58(5): 163--303. Poster.
-\end{revlist}
-
-%% ---------- Non-refereed work ----------------------------------------
-\section{Non-Refereed Work}
-\subsubsection{Ph.D. Thesis}
-Phillips, J.D. (2022). A Novel Statistical Framework for Assessment of
-Intraspecific Haplotype Sampling Completeness: Implications for DNA Barcode Gap
-Estimation. University of Guelph Atrium.\\
-URL: \url{https://atrium.lib.uoguelph.ca/items/8addfcc5-f21c-4691-89b7-c4db051892eb}
-
-\bigskip
-\legenddirect
-
-\medskip
-\begin{revlist}[itemsep=0.45\baselineskip]{nonrefereed}
-\item \dsup Cui, R.C. and \me (2026). Student-contributed poster for University of
-  Guelph March Open House
-\item \dsup Toth, N. and \me (2026). Student-contributed poster for University of
-  Guelph March Open House
-\item \dsup Cui, R.C. and \me (2025). The Importance in Design as a Computer
-  Scientist. Student-contributed SoCS Show and Tell video URL:
-  \url{https://github.com/RichaCui70/Dynamics-between-Seafood-Fraudsters-and-Buyers/tree/main/misc_resources}
-\item \me, \dsup De Vuono-Fraser, F.A., Gillis, D.J., and Hanner, R.H. (2024).
-  Statistical modelling of seafood fraud. Whiteboard explainer video. URL:
-  \url{https://www.youtube.com/watch?v=4jU8cU8M70U}
-\item \dsup Toth, N. and \me (2024). eDNA Collection Gets a Tech Update.
-  Student-contributed CEPS Research Highlights article. URL:
-  \url{https://www.uoguelph.ca/ceps/news/2024/07/edna-collection-gets-tech-upgrade}
-\item \dsup Toth, N. and \me (2024). Unravelling eDNA with Association Rule
-  Mining. Contributed guest post to the Science Borealis-syndicated blog of
-  Dr. Daniel Gillis. URL:
-  \url{https://danielgillis.wordpress.com/2024/08/15/unravelling-edna-with-association-rule-mining/}
-\item \me (2024). Summer URA Position. Contributed guest post to the Science
-  Borealis-syndicated blog of Dr. Daniel Gillis. URL:
-  \url{https://danielgillis.wordpress.com/2024/02/07/summer-ura-position-2/}
-\item \me (2022). Mind the Gap -- The DNA Barcode Gap, That Is. Contributed CEPS
-  Research Highlights article. URL:
-  \url{https://www.uoguelph.ca/ceps/news/2022/08/mind-gap-%E2%80%93-dna-barcode-gap}
-\item \me (2020). Barcode Cracking. Contributed CEPS Research Highlights
-  article. URL: \url{https://www.uoguelph.ca/ceps/news/2020/02/barcode-cracking}
-\item \me (2020). Protecting Biodiversity Through the Lens of Genetic Diversity.
-  Contributed guest post to the Science Borealis-syndicated blog of
-  Dr. Daniel Gillis. URL:
-  \url{https://danielgillis.wordpress.com/2020/01/30/protecting-biodiversity-through-the-lens-of-genetic-diversity/}
-\item \me (2019). IBOL8 and the Midnight Sun. Contributed guest post to the
-  Science Borealis-syndicated blog of Dr. Daniel Gillis. URL:
-  \url{https://danielgillis.wordpress.com/2019/07/02/reflections-ibol8-and-the-midnight-sun/}
-\item \me (2017). The Big Five and IBOL7. Contributed guest post to the Science
-  Borealis-syndicated blog of Dr. Daniel Gillis. URL:
-  \url{https://danielgillis.wordpress.com/2017/12/06/reflections-the-big-five-and-ibol7/}
-\item \me (2016). Sample size estimation for DNA barcoding: Are current sampling
-  levels enough? Contributed guest post to the DNA Barcoding Blog of
-  Dr. Dirk Steinke. URL:
-  \url{http://dna-barcoding.blogspot.com/2016/01/guest-post-sample-size-estimation-for.html}
-\item \me (2016). Sample size estimation for DNA barcoding of ray-finned fishes:
-  Are current sampling levels enough? Contributed newsletter article to the
-  Barcode Bulletin, 7(1). URL:
-  \url{https://journal.lib.uoguelph.ca/index.php/ibol/issue/view/345}
-\end{revlist}
 
 %% ---------- Peer review service --------------------------------------
 \section{Academic Peer Review Service}
-\textit{Ecology and Evolution}, \textit{F1000 Research}, \textit{Frontiers in
-Ecology and Evolution}, \textit{Lifestyle Genomics}, \textit{Mitochondrial DNA
-Part A}, \textit{Molecular Ecology Resources}, \textit{Molecular Biology
-Reports}, \textit{Methods in Ecology and Evolution}, \textit{Nature
+\textit{Ecology and Evolution}, \textit{F1000Research}, \textit{Frontiers in
+Ecology and Evolution}, \textit{Lifestyle Genomics}, \textit{Methods in Ecology and Evolution}, \textit{Mitochondrial DNA
+Part A},  \textit{Molecular Biology
+Reports}, \textit{Molecular Ecology Resources}, \textit{Nature
 Communications}
+
 
 %% ---------- Volunteer experience -------------------------------------
 \section{Volunteer Experience}
+
+\lr{\textbf{CCMPS Research Day \& Student Poster Presentations}}{2026}
+University of Guelph
+\begin{cvbullets}
+  \item Served as judge for undergraduate and graduate student posters
+\end{cvbullets}
+
+\medskip
+
 \lr{\textbf{CEPS Student Research Connections Networking Night}}{2025}
 University of Guelph
 \begin{cvbullets}
