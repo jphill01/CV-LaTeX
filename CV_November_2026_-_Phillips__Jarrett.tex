@@ -109,6 +109,14 @@
 \newcommand{\doi}[1]{DOI: \href{https://doi.org/#1}{\nolinkurl{#1}}}
 \newcommand{\doilink}[2]{DOI: \href{#2}{\nolinkurl{#1}}}
 
+% A reference, set two to a row: name, lines of title/affiliation, e-mail address
+\newcommand{\refperson}[3]{%
+  \begin{minipage}[t]{0.49\linewidth}\RaggedRight
+    \textbf{#1}\\
+    #2\\
+    \href{mailto:#3}{#3}%
+  \end{minipage}}
+
 % A student entry: name (with markers), year, one-line description
 \newcommand{\student}[3]{\lr{\textbf{#1}}{#2}\noindent #3\par\smallskip}
 
@@ -614,10 +622,10 @@ computer science, bioinformatics, statistics, and biology.
 
 %% ---------- Teaching -------------------------------------------------
 \section{Teaching Experience}
-%\lr{\textbf{Guest Lecturer}}{2026}
-%University of Guelph\\
-%\textbf{CIS*4020 -- Data Science}\\
-%Talk title: Association Rule Mining: From Market Baskets to Environmrntal %DNA (eDNA)
+\lr{\textbf{Guest Lecturer}}{2026}
+University of Guelph\\
+\textbf{CIS*4020 -- Data Science}\\
+Talk title: Association Rule Mining: From Market Baskets to Environmrntal DNA (eDNA)
 
 
 \medskip
@@ -688,5 +696,26 @@ University of Guelph
 \begin{cvbullets}
   \item Graded students on mobile app prototypes for various community partners using Qualtrics surveys
 \end{cvbullets}
+
+%% ---------- References -----------------------------------------------
+\section{References}
+\noindent
+\refperson{Dr. Daniel Gillis}
+  {Full Professor \& Statistician\\ School of Computer Science\\ University of Guelph}
+  {dgillis@uoguelph.ca}%
+\hfill
+\refperson{Dr. Robert Hanner}
+  {Full Professor\\ Department of Integrative Biology\\ Biodiversity Institute for Conservation Synthesis\\ University of Guelph}
+  {rhanner@uoguelph.ca}
+
+\bigskip
+\noindent
+\refperson{Dr. Deborah Stacey}
+  {Associate Professor Emerita\\ School of Computer Science\\ University of Guelph}
+  {dastacey@uoguelph.ca}%
+\hfill
+\refperson{Dr. Luiza Antonie}
+  {Full Professor\\ School of Computer Science\\ University of Guelph}
+  {lantonie@uoguelph.ca}
 
 \end{document}
